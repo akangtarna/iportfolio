@@ -1,0 +1,413 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  position: fixed; /* Agar navbar tetap terlihat saat scroll */
+  top: 0; /* Posisikan di atas halaman */
+  left: 0;
+  right: 0;
+  z-index: 9999; /* Agar navbar tetap di atas konten lainnya */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Memberikan efek bayangan */
+  transition: all 0.3s ease; /* Transisi yang halus saat posisi berubah */
+}
+
+/* Padding untuk konten agar tidak tertutup oleh navbar tetap */
+body {
+  padding-top: 80px; /* Menghindari konten tertutup navbar */
+}
+
+/* Styling untuk Logo dan Navigasi */
+header .logo img {
+  width: 100px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Efek hover pada link navbar */
+header nav ul li a:hover {
+  color: #f6b400; /* Mengubah warna saat hover */
+  text-decoration: underline; /* Menambahkan garis bawah saat hover */
+}
+
+/* Container */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+/* Section: About */
+#about {
+  background-color: #f4f4f4;
+  padding: 60px 0;
+  color: #333;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+/* Wrapper untuk konten About */
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #555;
+  max-width: 500px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Efek responsif untuk perangkat kecil */
+@media screen and (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-image {
+    margin-top: 20px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+
+/* Section: Services */
+#services {
+  background-color: #fff;
+  padding: 40px 0;
+}
+
+#services h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Wrapper untuk Card Layanan */
+.services-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.service-card {
+  background-color: #f9f9f9;
+  padding: 20px;
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Efek hover pada card */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+  .service-card {
+    width: 100%;
+  }
+}
+
+/* Section: Portfolio */
+#portfolio {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+}
+
+#portfolio h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Wrapper untuk item portfolio */
+.portfolio-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Setiap item portfolio */
+.portfolio-item {
+  background-color: #fff;
+  width: 30%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+.portfolio-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.portfolio-info p {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Efek hover pada item portfolio */
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif untuk layar kecil */
+@media screen and (max-width: 768px) {
+  .portfolio-item {
+    width: 100%;
+  }
+}
+
+/* Bagian Kontak Kami */
+.contact-section {
+  padding: 60px 0;
+  background-color: #f4f4f4; /* Latar belakang yang lebih terang dan netral */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Teks gelap */
+}
+
+.section-description {
+  text-align: center;
+  font-size: 18px;
+  color: #555; /* Teks sedikit lebih terang */
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.contact-item {
+  text-align: center;
+  width: 30%;
+}
+
+.contact-item i {
+  font-size: 40px;
+  color: #4e4e4e; /* Warna ikon abu-abu gelap */
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 16px;
+  color: #333; /* Teks gelap */
+  font-weight: 500;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.form-group {
+  flex: 1;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%; /* Pastikan input dan textarea tetap lebar penuh */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+button {
+  width: auto; /* Tombol akan disesuaikan dengan konten */
+  padding: 10px 20px; /* Menambahkan padding agar tombol tidak terlalu kecil */
+  margin-top: 10px;
+  display: block; /* Tombol menjadi block-level element */
+  margin-left: auto;
+  margin-right: auto; /* Memastikan tombol berada di tengah */
+  background-color: #ee780a;
+  color: white;
+  border: none;
+  border-radius: 44px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #c76d19;
+}
+
+/* Styling untuk Tombol Scroll to Top */
+.scroll-top {
+  position: fixed;
+  visibility: hidden; /* Tombol disembunyikan secara default */
+  opacity: 0;
+  right: 10px;
+  bottom: 10px; /* Sedikit lebih tinggi dari bawah */
+  z-index: 99999;
+  background-color: #f6b400; /* Background kuning cerah */
+  width: 30px; /* Ukuran tombol lebih kecil */
+  height: 30px; /* Ukuran tombol lebih kecil */
+  border-radius: 8px; /* Lebih sedikit melengkung daripada sebelumnya */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Memastikan ikon berada di tengah */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan untuk efek 3D */
+  transition: all 0.4s ease; /* Transisi yang halus */
+}
+
+.scroll-top i {
+  font-size: 22px; /* Ukuran ikon lebih kecil agar sesuai dengan tombol */
+  color: white; /* Warna ikon putih */
+  line-height: 0;
+}
+
+.scroll-top:hover {
+  background-color: #f4a300; /* Efek hover dengan warna kuning lebih gelap */
+  transform: translateY(-5px); /* Efek angkat tombol saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow lebih tajam saat hover */
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 20px; /* Posisi akhir tombol setelah scroll */
+  right: 20px; /* Posisi horizontal yang konsisten */
+}
+
+/* Efek animasi untuk menghilangkan tombol */
+.scroll-top {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); /* Mulai dari bawah */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Posisi akhir di tengah */
+  }
+}
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
